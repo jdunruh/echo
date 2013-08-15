@@ -15,10 +15,10 @@
 
   	<title><%= page_title %></title>
 
-  	<%%= stylesheet_link_tag    "application" %>
-  	<%%= javascript_include_tag "vendor/custom.modernizr" %>
+  	<%= stylesheet_link_tag    "application" %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= yield :html_head %>
-    <%%= csrf_meta_tags %>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
@@ -30,7 +30,6 @@
 
   <%= container :main %>
   </div>
-    <% if false %>
     	<script>
       	document.write('<script src=' +
       	('__proto__' in {} ? '<%%= asset_path("vendor/zepto") %>' : '<%%= asset_path("jquery") %>') +
@@ -46,7 +45,6 @@
       	};
       	var jQuery = $;
     	</script>
-  	<% end %>
-    <%%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "application" %>
   </body>
 </html>
