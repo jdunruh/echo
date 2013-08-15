@@ -1,0 +1,11 @@
+
+<li id="<%= menu_item[:id] %>" class="<%= "active" if menu_item[:selected] %> <%= " has-dropdown" if menu_item[:children]%>">
+  <a href="<%= menu_item[:url] %>"><%= menu_item[:name] %></a>
+  <% if menu_item[:children]    %>
+    <ul class="dropdown">
+     <% menu_item[:children].each do |item|  %>
+        <%= render :partial => _menu_item, :object => item,  %>
+    <% end %>
+    </ul>
+  <% end %>
+</li>

@@ -13,17 +13,23 @@
   	<!-- Set the viewport width to device width for mobile -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  	<title><%%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+  	<title><%= page_title %></title>
 
   	<%%= stylesheet_link_tag    "application" %>
   	<%%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= yield :html_head %>
     <%%= csrf_meta_tags %>
   </head>
 
   <body>
+  <%= cms_toolbar %>
+  <div id="wrapper" style="width: 700px; margin: 0 auto; text-align: left; padding: 30px">
+  Breadcrumbs: <%= render_breadcrumbs %>
+  Main Menu: <%= render_menu %>
+    <h1><%= page_title %></h1>
 
-    <%%= yield %>
-
+  <%= container :main %>
+  </div>
     <% if false %>
     	<script>
       	document.write('<script src=' +
@@ -44,4 +50,3 @@
     <%%= javascript_include_tag "application" %>
   </body>
 </html>
-

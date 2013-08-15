@@ -1,5 +1,5 @@
 EChO::Application.routes.draw do
-  mount BcmsNews::Engine => '/bcms_news'
+  # mount BcmsNews::Engine => '/bcms_news'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -59,4 +59,5 @@ EChO::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   mount_browsercms
+
 end
