@@ -4,7 +4,7 @@
   <% if menu_item[:children]    %>
     <ul class="dropdown">
      <% menu_item[:children].each do |item|  %>
-        <%= render :partial => _menu_item, :object => item,  %>
+        <%= render :partial => "_menu_item", :object => item  %>
     <% end %>
     </ul>
   <% end %>
