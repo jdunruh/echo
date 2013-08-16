@@ -31,8 +31,6 @@ GEM
     ancestry (1.2.5)
       activerecord (>= 2.2.2)
     arel (3.0.2)
-    bcms_news (1.4.1)
-      browsercms (>= 3.5.0.rc2, < 3.6.0)
     browsercms (3.5.7)
       ancestry (~> 1.2.4)
       ckeditor_rails (~> 3.6.4)
@@ -133,7 +131,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bcms_news
   browsercms (= 3.5.7)
   coffee-rails (~> 3.2.1)
   jquery-rails

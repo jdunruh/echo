@@ -39,4 +39,4 @@ gem 'jquery-rails'
 
 gem 'zurb-foundation'
 gem "browsercms", "3.5.7"
-gem "bcms_news"
+#gem "bcms_news"
